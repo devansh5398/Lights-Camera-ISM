@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lights Camera ISM</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="lci.css" />
+</head>
+<body onscroll="activeClass()">
+ <!-- Navigation bar -->
+  <nav>
+   <a href="#1" title="Home" class="tab active"><i class="fa fa-home"></i></a>
+   <a href="#2" title="Image Gallery" class="tab"><i class="fa fa-image"></i></a>
+   <a href="#3" title="Videos" class="tab"><i class="fa fa-video-camera"></i></a>
+   <a href="#4" title="Register" class="tab"><i class="fa fa-sign-in"></i></a>
+   <a href="#6" title="Contact" class="tab" style="float:right">Contact</a>
+   <a href="#5" title="About" class="tab" style="float:right">About</a>
+  </nav>
+  
+ <!-- Home section -->
+  <div id="1" class="sec home">
+   <div class="col7 h-p1">
+    <h1 style="font-variant:small-caps">LCI - Lights Camera ISM...</h1>
+    <p>A Filmography club of IIT (ISM) Dhanbad.</p>
+   </div>
+   <div class="col5 h-p2"><img src="logo.png" width="100%" /></div>
+  </div>
+  
+ <!-- Image Gallery Section --> 
+  <div id="2" class="sec image">
+   <div class="slide">
+    <img src="1.jpg" alt="SlideImages_1" width="100%"/>
+   </div>
+   <div class="slide">
+    <img src="2.png" alt="SlideImages_2" width="100%"/>
+   </div>
+   <div class="slide">
+    <img src="3.jpg" alt="SlideImages_3" width="100%"/>
+   </div>
+   <div class="slide">
+    <img src="4.jpg" alt="SlideImages_4" width="100%"/>
+   </div>
+   <div class="slide">
+    <img src="5.jpg" alt="SlideImages_5" width="100%"/>
+   </div>
+   <div class="slide">
+    <img src="6.jpg" alt="SlideImages_6" width="100%"/>
+   </div>
+   
+   <a class="prev" onclick="nextshow(-1)"><i class="fa fa-caret-left" style="font-size:2em"></i></a>
+   <a class="next" onclick="nextshow(1)"><i class="fa fa-caret-right" style="font-size:2em"></i></a>
+   
+   <div class="alldot">
+   <span class="dot active" onclick="show(1)"></span>
+   <span class="dot" onclick="show(2)"></span>
+   <span class="dot" onclick="show(3)"></span>
+   <span class="dot" onclick="show(4)"></span>
+   <span class="dot" onclick="show(5)"></span>
+   <span class="dot" onclick="show(6)"></span>
+   </div>
+  </div>
+
+  <!-- Videos Section -->
+  <div id="3" class="sec video">
+   <h1 id="heading">VIDEOS</h1>
+   <h2 id="subheading">Latest Ones</h2>
+   <div class="reelBox">
+   <div class="reelOuter">
+   <div class="reel">
+    <div class="thumbnails"><a href="">
+     <img src="Videos/97.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/96.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/95.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/94.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/93.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/92.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails"><a href="">
+     <img src="Videos/91.webp" />
+	 <div class="vtext">Dhanbad to Kolkata to Mandarmani || LCI Personals</div></a>
+	</div>
+	<div class="thumbnails" id="vAll"><a href="allVideos1.html">
+	 <div>See All</div></a>
+	</div>
+   </div>
+   </div>
+    <a id="prev" onclick="prev()"><i class="fa fa-chevron-circle-left"></i></a>
+    <a id="next" onclick="next()"><i class="fa fa-chevron-circle-right"></i></a>
+   </div>
+   <a href="allVideos1.html" id="seeAll">See All >></a>
+  </div>
+  
+  <!-- Register Section -->
+  <div id="4" class="sec register">
+   <div id="r-p1"><h1>REGISTER</h1></div>
+   <div id="rfloat">
+   <div id="r-p2"><p>Register here for "51 Hours of Film Making"</p></div>
+   <div id="r-p3">
+    <form onsubmit="return submitData()">
+	 <input type="text" name="first" placeholder="First Name" />&nbsp &nbsp &nbsp
+	 <input type="text" name="last" placeholder="Last Name" /><br />
+	 <span class="f1-1"></span><span class="f1-1"></span>
+	 <input type="text" name="admno" placeholder="Admission No." class="in" /><br />
+	 <span id="f1-2"></span>
+	 <input type="text" name="contactno" placeholder="Contact No." class="in" /><br />
+	 <span id="f1-3"></span>
+	 <input type="submit" value="Submit" />
+	</form>
+   </div>
+   </div>
+  </div>
+  
+  <!-- About Section -->
+  <div id="5" class="sec about">
+   <div>
+    <h1>About Our LCI</h1>
+    <div>
+     <p class="para1">Lights Camera ISM is the filmography club of IIT (ISM) Dhanbad  created by a passionate guy, Piyush Chaudhary.
+	 It was he who worked with full interest to uplift this club. After a year, other guys joined it too and contributed
+	 to the same.</p>
+	 <p>And now also, we are growing, learning and gaining more and more knowledge to filter our skills of filmography.</p>
+    </div>
+   </div>
+  </div>
+  
+  <!-- Contact Section -->
+  <div id="6" class="sec contact">
+   <h1>Team Members</h1>
+   <div class="grid1">
+    <div class="grid">
+	<div class="photo">
+     <img src="contact.jpg" alt="member_1" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Piyush Chaudhary</span><br />Founder of LCI,<br />Dept. of Petroleum Engineering</div>
+    </div>
+   </div>
+   <div class="grid2">
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_2" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Aditya Mudgil</span><br />Dept. of Mathematics and Computing Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_3" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Aryan Chaudhary</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_4" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Mukul Anand</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_5" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Shivansh Gupta</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_6" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Tejas Bagrecha</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+   </div>
+   <div class="grid3">
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_7" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Abhijit Khose</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_8" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Adarsh Soni</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_9" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Devansh Singhal</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_10" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Kuldeep Gautam</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_11" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Naman Sure</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_12" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Nitin Modi</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_13" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Paras Sikka</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_14" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Pradhuyaman Neema</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_15" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Ravindra Singh</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_16" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Sanchit Kumar</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_17" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Shreya Khunval</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_18" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Shubham Agarwal</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_19" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Shubhangi Vyas</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_20" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Rashmi Lodwal</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_21" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Ravi Gupta</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+    <div class="grid" style="grid-area: 4/3/span 1/span 1">
+    <div class="photo">
+     <img src="contact.jpg" alt="member_22" width="100%"/>
+	 <div class="fb"><a href=""><i class="fa fa-facebook"></i></a></div>
+	 <div class="insta"><a href=""><i class="fa fa-instagram"></i></a></div>
+	</div>
+	<div class="caption"><span>Tazril Ansari</span><br />Dept. of Petroleum Engineering</div>
+    </div>
+   </div>
+   <footer>
+    <p>Follow us also at:</p>
+	<a href="https://www.youtube.com/channel/UCHJV3I1GtG63GnnxfrO0XQA"><i class="fa fa-youtube-square"></i></a>
+	<a href="https://www.facebook.com/14ryproductions/"><i class="fa fa-facebook"></i></a>
+	<a href=""><i class="fa fa-instagram"></i></a>
+   </footer>
+  </div>
+  
+  <script src="lci.js"></script>
+</body>
+</html>
